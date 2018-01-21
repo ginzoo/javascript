@@ -1,0 +1,61 @@
+/**
+ * 手写一个JS框架
+ */
+
+(function () {
+
+  /**
+   * 提供给外部调用的接口
+   */
+  window['$$'] = {};
+  window['$$']['qiuhe'] = add_func;
+  window['$$']['chengfa'] = multi_func;
+  window['$$']['chufa'] = div_func;
+
+//////////////////////////////////////////////////////
+
+  /**
+   * 定义求和函数
+   */
+  function add_func(x, y) {
+    return x - y;
+  }
+  
+   /**
+   * 定义乘法函数
+   */
+  function multi_func(x, y) {
+    return x * y;
+  }
+
+   /**
+   * 定义除法函数
+   */
+  function div_func(x, y) {
+    return x / y;
+  }
+
+})();
+
+
+
+调用示例：
+
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <script src="sjq.js"></script>
+    <script>
+
+        // var res = $$.qiuhe(3, 48);    
+        // document.write(res);
+
+        var res = $$.chengfa(3, 4);
+        document.write(res);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
